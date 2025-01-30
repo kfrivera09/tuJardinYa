@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión De Servicios</title>
+  <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a>Bienvenido</a></li>
+      </ul>
+    </nav>
+    <div id="buttons-container">
+      <button id="obtener_agenda">Ver Mis Servicios</button>
+      <button id="limpiar_agenda">Limpiar</button>
+      <button id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Agrega Tus Servicios</h1>
+  <!-- Formulario para agregar un nuevo servicio -->
+  <form id="agenda-form">
+    <label for="titulo">Titulo:</label>
+    <input type="text" id="titulo" name="titulo" required>
+
+    <label for="description">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion" required>
+
+    <label for="direccion">Direccion:</label>
+    <input type="text" id="direccion" name="direccion" required>
+
+    <label for="fecha">Fecha deseada:</label>
+    <input type="date" id="fecha" name="fecha" required>
+
+    <label for="hora">Hora:</label>
+    <input type="text" id="hora" name="hora" required>
+
+    <label for="estado" id="estado-label" style="display: none;">Estado:</label>
+    <input type="text" id="estado" name="estado" style="display: none;">
+
+    <button type="submit">Agregar Servicio</button>
+</form>
+
+  <hr>
+  
+  <!-- Lista de servicios -->
+  <ul id="agenda-list"></ul>
+</main>
+  <script src="../js/script.js"></script>
+</body>
+</html>

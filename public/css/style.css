@@ -1,0 +1,76 @@
+/* Reset de estilos básicos para asegurar consistencia en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f5e9; /* Fondo verde claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: #2e7d32; /* Verde oscuro */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #66bb6a; /* Verde más claro */
+    margin-bottom: 20px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #c8e6c9; /* Borde verde claro */
+    border-radius: 5px;
+    background-color: #f1f8e9; /* Fondo verde muy claro */
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #2e7d32; /* Verde oscuro */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #1b5e20; /* Verde más oscuro */
+}
+
+p {
+    color: #4caf50; /* Verde */
+}
+
+a {
+    color: #1b5e20; /* Verde oscuro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
