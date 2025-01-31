@@ -1,4 +1,4 @@
-const url = 'http://tu-jardin-ya.vercel.app/api/auth/login'; // URL del backend
+const url = 'https://tu-jardin-ya.vercel.app/api/auth/login'; // URL del backend
 
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();

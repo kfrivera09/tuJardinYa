@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const apiUrl = 'http://tu-jardin-ya.vercel.app/api/agenda';
-  const esAdmin = false; // Cambia esto según sea necesario para el perfil del usuario
+  const apiUrl = 'https://tu-jardin-ya.vercel.app/api/agenda';
+  const esAdmin = false; 
 
   function mostrarCamposAdmin(esAdmin) {
     const estadoLabel = document.getElementById('estado-label');

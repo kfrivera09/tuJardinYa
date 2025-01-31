@@ -1,4 +1,4 @@
-const url='http://tu-jardin-ya.vercel.app/api/auth/registro';
+const url='https://tu-jardin-ya.vercel.app/api/auth/registro';
 
 document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();
