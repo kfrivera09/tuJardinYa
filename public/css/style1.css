@@ -14,8 +14,6 @@ body {
   align-items: center;
   height: 100vh;
 }
-
-/* Estilos para el header */
 /* Estilos para el header */
 header {
   width: 100%;
@@ -97,53 +95,58 @@ h1 {
 }
 
 form {
-  width: 100%;
+  width: 50%; /* Reducir el ancho */
+  max-width: 500px;
   background-color: #ffffff; /* Fondo blanco */
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
-  display: block;
-  margin-bottom: 10px;
-  color: #4caf50; /* Verde */
+  width: 100%;
+  margin-bottom: 5px;
+  color: #2e7d32; /* Verde oscuro */
   font-weight: bold;
+  text-align: left;
 }
+
 
 input[type="text"],
 input[type="date"] {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 12px;
+  margin-bottom: 15px;
   border: 1px solid #c8e6c9; /* Borde verde claro */
   border-radius: 5px;
   background-color: #f1f8e9; /* Fondo verde muy claro */
+  font-size: 1em;
 }
 
-button[type="submit"],
-button {
+button[type="submit"] {
+  width: 100%;
   background-color: #2e7d32; /* Verde oscuro */
   color: white;
-  padding: 10px 20px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-top: 10px;
   font-size: 1em;
 }
 
-button[type="submit"]:hover,
-button:hover {
+button[type="submit"]:hover {
   background-color: #1b5e20; /* Verde más oscuro */
-  transform: scale(1.05); /* Pequeño aumento al pasar el mouse */
+  transform: scale(1.05);
 }
 
 button:active {
   background-color: #1b5e20; /* Verde más oscuro */
-  transform: scale(0.95); /* Pequeña reducción al hacer clic */
+  transform: scale(0.95);
 }
 
 hr {
@@ -175,4 +178,59 @@ hr {
 
 #agenda-list li:hover {
   background-color: #f1f8e9; /* Fondo verde muy claro al pasar el mouse */
+}
+
+/* Estilo para el contenedor de la lista de agenda/tarjetas */
+#agenda-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Estilo para las tarjetas de agenda */
+.agenda-card {
+  background-color: white;
+  border: 1px solid #c8e6c9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Ancho fijo */
+  transition: transform 0.3s ease;
+}
+
+.agenda-card:hover {
+  background-color: #f1f8e9;
+  transform: scale(1.02);
+}
+
+/* Estilo para los títulos dentro de las tarjetas */
+.agenda-card h3 {
+  color: #2e7d32; /* Verde oscuro */
+  margin-bottom: 10px;
+}
+
+/* Estilo para los párrafos dentro de las tarjetas */
+.agenda-card p {
+  margin: 10px 0;
+}
+
+/* Estilo para los botones */
+.agenda-card .edit-btn,
+.agenda-card .delete-btn {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.agenda-card .edit-btn:hover,
+.agenda-card .delete-btn:hover {
+  background-color: #45a049; /* Color de fondo al pasar el cursor */
 }

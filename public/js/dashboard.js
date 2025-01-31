@@ -149,34 +149,38 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-  
-  // 
-  function mostrarAgenda(agenda) {
-    const servicesList = document.getElementById('services-list');
-    servicesList.innerHTML = ''; 
+ 
+function mostrarAgenda(agenda) {
+  const servicesList = document.getElementById('services-list');
+  servicesList.innerHTML = ''; 
 
-    agenda.forEach(item => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${item.titulo}</td>
-        <td>${item.descripcion}</td>
-        <td>${item.direccion}</td>
-        <td>${item.fecha}</td>
-        <td>${item.hora}</td>
-        <td>${item.estado}</td>
-        <td><button class="edit-btn" data-id="${item._id}">Editar</button></td>
+  agenda.forEach(item => {
+      // Crea un div para la tarjeta
+      const card = document.createElement('div');
+      card.className = 'service-card';
+
+      // Agrega el contenido de la tarjeta
+      card.innerHTML = `
+          <h3>${item.titulo}</h3>
+          <p><strong>Descripción:</strong> ${item.descripcion}</p>
+          <p><strong>Dirección:</strong> ${item.direccion}</p>
+          <p><strong>Fecha:</strong> ${item.fecha}</p>
+          <p><strong>Hora:</strong> ${item.hora}</p>
+          <p><strong>Estado:</strong> ${item.estado}</p>
+          <button class="edit-btn" data-id="${item._id}">Editar</button>
       `;
-      servicesList.appendChild(tr);
-    });
+      // Agrega la tarjeta al contenedor
+      servicesList.appendChild(card);
+  });
 
-    // Añadir eventos a los botones de editar
-    document.querySelectorAll('.edit-btn').forEach(button => {
+  // Añadir eventos a los botones de editar
+  document.querySelectorAll('.edit-btn').forEach(button => {
       button.addEventListener('click', (event) => {
-        const id = event.target.dataset.id;
-        abrirModal(id);
+          const id = event.target.dataset.id;
+          abrirModal(id);
       });
-    });
-  }
+  });
+}
 
   document.getElementById('welcomeMessage').textContent = `¡Bienvenido ${usuario}!`;
   

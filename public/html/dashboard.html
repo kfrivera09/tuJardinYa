@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="../css/style2.css">
 </head>
+
 <body>
     <header>
         <div id="welcome-container">
             <h1 id="welcomeMessage"></h1>
+        </div>
+        <div>
+            <button id="logoutBtn">Cerrar sesión</button>
         </div>
         <div id="account-container">
             <div id="account-icon">
@@ -20,10 +24,12 @@
             </div>
         </div>
     </header>
-   
-    <aside>
-        <!-- Puedes agregar un menú lateral aquí si es necesario -->
-    </aside>
+
+      <!-- Sección solo visible para administradores -->
+      <div id="adminMetrics" class="metrics" style="display: none;">
+        <h1>Acceso de Administrador</h1>
+        <!-- Agrega aquí las métricas específicas para el administrador -->
+    </div>
 
     <main>
         <div id="dashboard-container">
@@ -47,37 +53,19 @@
             <!-- Agrega aquí las métricas específicas para el administrador -->
         </div>
 
-        <hr>
+        <hr class="hr">
 
-        <!-- Nueva sección para mostrar los servicios -->
-        <div id="services-container">
-            <h2>Agenda de servicios</h2>
-            <table id="services-table">
-                <thead>
-                    <tr>
-                        <th>Título</th>
-                        <th>Descripción</th>
-                        <th>Dirección</th>
-                        <th>Fecha</th>
-                        <th>Hora</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="services-list">
-                    <!-- Aquí se insertarán los servicios dinámicamente -->
-                </tbody>
-            </table>
-        </div>
-
-        <hr>
+        <ul id="services-list"></ul>
+         <!-- Aquí se insertarán los servicios dinámicamente -->
+          
+        <hr class="hr">
 
         <!-- Formulario Modal para editar el estado -->
         <div id="editModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Editar Estado</h2>
-                <form id="editForm">
+                <form class ="fmodal" id ="editForm">
                     <label for="editEstado">Estado:</label>
                     <select id="editEstado">
                         <option value="pendiente">Pendiente</option>
@@ -87,8 +75,6 @@
                 </form>
             </div>
         </div>
-        <hr>
-        <button id="logoutBtn">Cerrar sesión</button>
     </main>
 
     <script src="../js/dashboard.js"></script>

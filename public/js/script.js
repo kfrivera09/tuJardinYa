@@ -21,34 +21,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mostrarCamposAdmin(esAdmin);
 
-  function getAgenda() {
-    fetch(apiUrl)
+function getAgenda() {
+  fetch(apiUrl)
       .then(response => response.json())
       .then(items => {
-        const agendaList = document.getElementById('agenda-list');
-        agendaList.innerHTML = '';
+          const agendaList = document.getElementById('agenda-list');
+          agendaList.innerHTML = '';
 
-        items.forEach(agenda => {
-          const li = document.createElement('li');
-          li.textContent = `${agenda.titulo} - ${agenda.descripcion} - ${agenda.direccion} - ${agenda.fecha} - ${agenda.hora} - ${agenda.estado}`;
-          const editarBoton = document.createElement('button');
-          editarBoton.textContent = 'Editar';
-          editarBoton.style.backgroundColor = '#6db9b8';
-          editarBoton.addEventListener('click', () => editarAgenda(agenda));
+          items.forEach(agenda => {
+              // Crea un div para la tarjeta
+              const card = document.createElement('div');
+              card.className = 'agenda-card';
 
-          const deleteButton = document.createElement('button');
-          deleteButton.textContent = 'Eliminar';
-          deleteButton.style.backgroundColor = '#f76c6c';
-          deleteButton.addEventListener('click', () => deleteAgenda(agenda._id));
+              // Agrega el contenido de la tarjeta
+              card.innerHTML = `
+                  <h3>${agenda.titulo}</h3>
+                  <p><strong>Descripción:</strong> ${agenda.descripcion}</p>
+                  <p><strong>Dirección:</strong> ${agenda.direccion}</p>
+                  <p><strong>Fecha:</strong> ${agenda.fecha}</p>
+                  <p><strong>Hora:</strong> ${agenda.hora}</p>
+                  <p><strong>Estado:</strong> ${agenda.estado}</p>
+              `;
 
-          li.appendChild(editarBoton);
-          li.appendChild(deleteButton);
+              // Botón de editar
+              const editarBoton = document.createElement('button');
+              editarBoton.textContent = 'Editar';
+              editarBoton.className = 'edit-btn';
+              editarBoton.addEventListener('click', () => editarAgenda(agenda));
 
-          agendaList.appendChild(li);
-        });
+              // Botón de eliminar
+              const deleteButton = document.createElement('button');
+              deleteButton.textContent = 'Eliminar';
+              deleteButton.className = 'delete-btn';
+              deleteButton.addEventListener('click', () => deleteAgenda(agenda._id));
+
+              // Agrega los botones a la tarjeta
+              card.appendChild(editarBoton);
+              card.appendChild(deleteButton);
+
+              // Agrega la tarjeta al contenedor
+              agendaList.appendChild(card);
+          });
       })
       .catch(error => console.error('Error al obtener la agenda:', error));
-  }
+}
+
 
   document.getElementById('agenda-form').addEventListener('submit', (e) => {
     e.preventDefault();
