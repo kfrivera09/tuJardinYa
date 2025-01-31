@@ -46,7 +46,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
             // Verificar y ajustar la redirección dependiendo del rol
             if (userDetails.role === 'admin') {
                 console.log('Redirigiendo al dashboard del admin...');
-                window.location.href = 'http://localhost:3000/html/dashboard.html'; // Redirigir al dashboard del admin
+                window.location.href = './html/dashboard.html'; // Redirigir al dashboard del admin
             } else {
                 console.log('Redirigiendo a la página de agenda...');
                 window.location.href = './html/agenda.html'; // Ajustar la ruta a la página correcta de la agenda
