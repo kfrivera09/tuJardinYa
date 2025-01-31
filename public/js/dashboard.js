@@ -1,5 +1,5 @@
-const urlUsuarios = 'http://localhost:3000/api/admin/usuarios';
-const urlAgenda = 'http://localhost:3000/api/agenda';
+const urlUsuarios = 'http://tu-jardin-ya.vercel.app/api/admin/usuarios';
+const urlAgenda = 'http://tu-jardin-ya.vercel.app/api/agenda';
 
 document.addEventListener('DOMContentLoaded', () => {
   const token = localStorage.getItem('token'); 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const apiUrl = 'http://localhost:3000/api/agenda';
+  const apiUrl = 'http://tu-jardin-ya.vercel.app/api/agenda';
   const esAdmin = false; // Cambia esto según sea necesario para el perfil del usuario
 
   function mostrarCamposAdmin(esAdmin) {
