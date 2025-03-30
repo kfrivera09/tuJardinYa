@@ -1,0 +1,237 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 5px; /* Eliminar el margen por defecto del cuerpo */
+    
+}
+
+header {
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    display: flex; /* Para alinear elementos en línea */
+    align-items: center; /* Para centrar verticalmente */
+    justify-content: space-between; /* Para distribuir espacio entre elementos */
+    position: fixed; /* Hacer que el header sea fijo */
+    top: 0; /* Fijar el header en la parte superior */
+    width: 100%; /* Asegurarse de que el header ocupe todo el ancho de la página */
+    z-index: 1000; /* Asegurarse de que el header se superponga a otros elementos */
+    padding: 10px 40px; /* Añade espacio a la derecha del header */
+    font-weight: bold; 
+}
+
+header img#logo {
+    height: 100px; /* Ajusta el tamaño del logo según tus necesidades */
+    margin-right: 1px; /* Reduce el espacio entre el logo y el título */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px; 
+    color: green;
+}
+
+header nav {
+    margin-left: auto; /* Alinea la navegación hacia la derecha */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Para alinear elementos en línea */
+    gap: 40px;
+}
+
+header nav ul li {
+    margin-inline-end: 50px;
+}
+
+header#navegacion-sitio {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+header#navegacion-sitio nav ul li a {
+    text-decoration: none;
+    color: #0b0b0b;
+}
+
+header#navegacion-sitio nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*Footer*/
+
+footer {
+    background-color: #449164;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    max-width: 300px;
+    margin: 20px 0;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    margin: 5px 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-socials {
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-socials a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* secciones de la pagina */ 
+
+.section-2 {
+    background-color: #449164;
+    text-align: center;
+    padding: 100px;
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    height: 50vh; /* Altura del contenedor para centrar verticalmente */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Botones de la pagina */
+
+.button-link {
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    display: inline-block; /* Asegurarse de que el enlace no afecte otros elementos */
+}
+
+.cssbuttons-io-button {
+    background: #1edd4a;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #0b6128;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #337a31;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #000000;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  
+
+/**/
+
+.menu-seccion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Centra los items horizontalmente */
+}
+
+.menu-item {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.33% - 40px); /* Ajusta este valor según el número de columnas deseado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación al pasar el puntero */
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    margin: 15px 0 10px;
+}
+
+.menu-item p {
+    margin: 0;
+}

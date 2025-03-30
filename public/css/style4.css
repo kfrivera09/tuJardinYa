@@ -1,0 +1,224 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 5px; /* Eliminar el margen por defecto del cuerpo */
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125vh;
+}
+
+header {
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    display: flex; /* Para alinear elementos en línea */
+    align-items: center; /* Para centrar verticalmente */
+    justify-content: space-between; /* Para distribuir espacio entre elementos */
+    position: fixed; /* Hacer que el header sea fijo */
+    top: 0; /* Fijar el header en la parte superior */
+    width: 100%; /* Asegurarse de que el header ocupe todo el ancho de la página */
+    z-index: 1000; /* Asegurarse de que el header se superponga a otros elementos */
+    padding: 10px 40px; /* Añade espacio a la derecha del header */
+    font-weight: bold; 
+}
+
+header img#logo {
+    height: 100px; /* Ajusta el tamaño del logo según tus necesidades */
+    margin-right: 1px; /* Reduce el espacio entre el logo y el título */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px; 
+    color: green;
+}
+
+header nav {
+    margin-left: auto; /* Alinea la navegación hacia la derecha */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Para alinear elementos en línea */
+    gap: 40px;
+}
+
+header nav ul li {
+    margin-inline-end: 50px;
+}
+
+header#navegacion-sitio {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+header#navegacion-sitio nav ul li a {
+    text-decoration: none;
+    color: #0b0b0b;
+}
+
+header#navegacion-sitio nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* diseño de el form de contacto */
+
+.contact-section {
+    width: 100%;
+    max-width: 930px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgb(46, 164, 33);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-container {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.left-side, .right-side {
+    padding: 20px;
+    width: 50%;
+}
+
+.left-side {
+    border-right: 1px solid #ddd;
+}
+
+.left-side h2, .right-side h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* en esta seccion del formulario esta el css del boton*/
+
+.button {
+    text-decoration: none;
+    line-height: 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position:sticky;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.05);
+    background-color: #fff;
+    color: #121212;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button-decor {
+    position: absolute;
+    inset: 0;
+    background-color: var(--clr);
+    transform: translateX(-100%);
+    transition: transform .3s;
+    z-index: 0;
+  }
+  
+  .button-content {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button__icon {
+    width: 48px;
+    height: 40px;
+    background-color: var(--clr);
+    display: grid;
+    place-items: center;
+  }
+  
+  .button__text {
+    display: inline-block;
+    transition: color .2s;
+    padding: 2px 1.5rem 2px;
+    padding-left: .75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
+  
+  .button:hover .button__text {
+    color: #fff;
+  }
+  
+  .button:hover .button-decor {
+    transform: translate(0);
+  }
+
+  /*fin de css de boton enviar*/
+
+  /* boton para ir al registro */
+
+.button1 {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 400px;
+    font-size: 13px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #66ff66;
+    color: ghostwhite;
+   }
+   
+   .button1 span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+   }
+   
+   .button1:hover span {
+    color: black;
+   }
+   
+   .button1::before,
+   .button1::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+   }
+   
+   .button1::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+   }
+   
+   .button1:hover::before {
+    transform: translate3d(100%, 0, 0);
+   }
+   
