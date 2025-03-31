@@ -1,7 +1,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin: 5px; /* Eliminar el margen por defecto del cuerpo */
-    
+    padding-top: 100px;
 }
 
 header {
@@ -38,10 +38,15 @@ header nav ul {
     padding: 0;
     display: flex; /* Para alinear elementos en línea */
     gap: 40px;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+    justify-content: center; /* Centrar los ítems en pantallas pequeñas */
 }
 
 header nav ul li {
     margin-inline-end: 50px;
+    margin: 5px; /* Reducir el espacio para acomodar más ítems */
+    text-align: center;
+  
 }
 
 header#navegacion-sitio {
@@ -52,6 +57,9 @@ header#navegacion-sitio {
 header#navegacion-sitio nav ul li a {
     text-decoration: none;
     color: #0b0b0b;
+    font-size: 14px; /* Reducir tamaño de la fuente en pantallas pequeñas */
+    padding: 5px 10px; /* Ajustar el padding para ahorrar espacio */
+
 }
 
 header#navegacion-sitio nav ul li a:hover {
@@ -196,9 +204,6 @@ footer {
     transform: scale(0.95);
   }
   
-
-/**/
-
 .menu-seccion {
     display: flex;
     flex-wrap: wrap;
@@ -235,3 +240,114 @@ footer {
 .menu-item p {
     margin: 0;
 }
+
+/* Ajustes Responsivos */
+
+/* Dispositivos pequeños (teléfonos móviles) */
+@media (max-width: 600px) {
+    body {
+      margin: 0;
+      padding-top: 120px; /* Espacio extra para pantallas pequeñas */
+
+    }
+  
+    header {
+        flex-direction: column; /* Cambiar la orientación a columna */
+        padding: 10px; /* Ajustar padding para pantallas más pequeñas */
+        align-items: center;
+        height: auto;
+    
+    }
+  
+    header img#logo {
+      height: 80px; /* Reducir el tamaño del logo para pantallas pequeñas */
+      margin-right: 0;
+    }
+  
+    header h1 {
+      text-align: center;
+      font-size: 18px; /* Reducir tamaño del texto */
+    }
+  
+    header nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px; /* Reducir espacio entre ítems */
+      padding: 0%;
+      margin: 0%;
+    }
+
+    header nav ul li a {
+        font-size: 10px; /* Reducir más el tamaño de la fuente para acomodarlo */
+        padding: 5px 8px; /* Ajustar espacio interno */
+        white-space: nowrap;
+      }    
+  
+    .menu-item {
+      width: calc(100% - 40px); /* Hacer que las tarjetas ocupen toda la fila */
+    }
+  
+    .section-2 {
+      padding: 50px; /* Reducir el padding */
+      height: auto; /* Ajustar altura automática */
+    }
+  
+    .cssbuttons-io-button {
+      font-size: 14px; /* Reducir el tamaño del botón */
+      height: 2.5em;
+    }
+  
+    .footer-container {
+      flex-direction: column; /* Alinear las secciones verticalmente */
+      text-align: center; /* Centrar el texto */
+    }
+  
+    .footer-section {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Dispositivos medianos (tabletas) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    header {
+      padding: 20px;
+    }
+  
+    header img#logo {
+      height: 90px;
+    }
+  
+    header nav ul {
+      gap: 20px;
+      justify-content: space-evenly;
+    }
+  
+    .menu-item {
+      width: calc(50% - 40px); /* Dos columnas en tabletas */
+    }
+  
+    .section-2 {
+      padding: 80px;
+    }
+  
+    .footer-container {
+      justify-content: space-between; /* Distribuir horizontalmente */
+    }
+  }
+  
+  /* Dispositivos grandes (escritorios) */
+  @media (min-width: 1025px) {
+    .menu-item {
+      width: calc(33.33% - 40px); /* Tres columnas en escritorios */
+    }
+  
+    header img#logo {
+      height: 100px;
+    }
+  
+    header nav ul {
+      gap: 40px; /* Mantener espaciado amplio */
+    }
+  }
+  

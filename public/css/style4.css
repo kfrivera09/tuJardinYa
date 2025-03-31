@@ -222,3 +222,115 @@ input, textarea {
     transform: translate3d(100%, 0, 0);
    }
    
+   /* Estilos Generales Responsivos */
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column; /* Ajustar alineación en móviles */
+        padding: 20px; /* Reducir espacio */
+        height: auto; /* Dejar que el contenido crezca dinámicamente */
+        padding-top: 0px;
+    }
+
+    header {
+        flex-direction: column; /* Colocar elementos en columna */
+        align-items: center; /* Centrar elementos */
+        padding: 10px 20px; /* Reducir padding */
+        height: auto; /* Ajustar altura automática */
+    }
+
+    header img#logo {
+        height: 80px; /* Reducir tamaño del logo en móviles */
+        margin-right: 0;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 18px; /* Reducir tamaño del título */
+    }
+
+    header nav ul {
+        flex-direction: row; /* Cambiar a disposición vertical */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* Ajustar espacio entre ítems */
+        padding: 0%;
+        margin: 0%; /* Añadir espacio vertical */
+    }
+
+    .contact-container {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        margin-top: 176px;
+    }
+
+    .left-side,
+    .right-side {
+        width: 100%; /* Usar todo el ancho disponible */
+        padding: 10px; /* Reducir padding interno */
+    }
+
+    .button, .button1 {
+        font-size: 12px; /* Reducir tamaño del texto */
+        padding: 8px 12px; /* Reducir tamaño general del botón */
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        padding: 10px 30px;
+        height: auto;
+    }
+
+    header {
+        padding: 15px 30px; /* Ajustar padding para tabletas */
+    }
+
+    header img#logo {
+        height: 80px; /* Tamaño moderado para tabletas */
+    }
+
+    header nav ul {
+        gap: 20px; /* Reducir espacio entre ítems en tabletas */
+    }
+
+    .contact-container {
+        flex-direction: row; /* Mantener disposición horizontal */
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten */
+    }
+
+    .left-side,
+    .right-side {
+        width: 48%; /* Compartir espacio en tabletas */
+    }
+
+    .button, .button1 {
+        font-size: 14px;
+    }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    header img#logo {
+        height: 100px; /* Tamaño original del logo */
+    }
+
+    .contact-container {
+        flex-direction: row; /* Mantener disposición horizontal */
+        justify-content: space-between; /* Distribuir espacio entre lados */
+    }
+
+    .left-side,
+    .right-side {
+        width: 50%; /* Tamaño original para escritorio */
+    }
+
+    .button, .button1 {
+        font-size: 16px;
+    }
+}

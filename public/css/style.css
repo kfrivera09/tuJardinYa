@@ -11,27 +11,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    min-height: 100vh; /* Ajustado para evitar un scroll excesivo */
+    flex-direction: column; /* Para mejorar la disposición en pantallas pequeñas */
 }
 
 .container {
     background-color: #ffffff; /* Fondo para el contenedor */
-    padding: 20px 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 90%; /* Adaptar tamaño en pantallas pequeñas */
+    max-width: 400px; /* Limitar ancho en pantallas grandes */
 }
 
-h1 {
-    font-size: 2em;
-    color: #2e7d32; /* Verde oscuro */
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.5em;
-    color: #66bb6a; /* Verde más claro */
-    margin-bottom: 20px;
+h1, h2 {
+    margin: 10px 0;
+    word-wrap: break-word; /* Asegurar que textos largos no desborden */
+    color: #3b7b3d;
 }
 
 input[type="email"], input[type="password"] {
@@ -76,56 +73,63 @@ a:hover {
 }
 
 /* header */
-
 header {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     border-bottom: 1px solid #ccc;
-    display: flex; /* Para alinear elementos en línea */
-    align-items: center; /* Para centrar verticalmente */
-    justify-content: space-between; /* Para distribuir espacio entre elementos */
-    position: fixed; /* Hacer que el header sea fijo */
-    top: 0; /* Fijar el header en la parte superior */
-    width: 100%; /* Asegurarse de que el header ocupe todo el ancho de la página */
-    z-index: 1000; /* Asegurarse de que el header se superponga a otros elementos */
-    padding: 10px 40px; /* Añade espacio a la derecha del header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra para mejor diseño */
 }
 
 header img#logo {
-    height: 100px; /* Ajusta el tamaño del logo según tus necesidades */
-    margin-right: 1px; /* Reduce el espacio entre el logo y el título */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px; 
-    color: green;
-}
-
-header nav {
-    margin-left: auto; /* Alinea la navegación hacia la derecha */
+    height: 60px; /* Reducir tamaño en móviles */
+    margin-right: 10px;
 }
 
 header nav ul {
     list-style-type: none;
+    display: flex;
+    gap: 20px;
     padding: 0;
-    display: flex; /* Para alinear elementos en línea */
-    gap: 40px;
+    flex-wrap: wrap; /* Permitir que el menú se ajuste en móviles */
 }
 
 header nav ul li {
-    margin-inline-end: 50px;
+    margin: 0;
 }
 
-header#navegacion-sitio {
-    background-color: #ffffff;
-    padding: 10px;
-}
-
-header#navegacion-sitio nav ul li a {
-    text-decoration: none;
+header nav ul li a {
     color: #0b0b0b;
+    text-decoration: none;
+    font-size: 0.9em; /* Ajustar tamaño de fuente en dispositivos pequeños */
 }
 
-header#navegacion-sitio nav ul li a:hover {
+header nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Media queries para diseño responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Agregar algo de espacio en pantallas pequeñas */
+    }
+    header {
+        flex-direction: column; /* Apilar contenido del header */
+        align-items: flex-start; /* Alinear contenido al inicio */
+    }
+    header nav ul {
+        gap: 10px; /* Reducir espacio entre elementos del menú */
+    }
+    h1 {
+        font-size: 1.5em; /* Reducir tamaño en pantallas pequeñas */
+    }
+    h2 {
+        font-size: 1.2em; /* Ajustar subtítulos en móviles */
+    }
 }

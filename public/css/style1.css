@@ -107,6 +107,27 @@ form {
   align-items: center;
 }
 
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  form {
+    width: 90%; /* Ampliar el ancho para pantallas pequeñas */
+    padding: 20px; /* Ajustar espacio interno */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  form {
+    width: 70%; /* Ajustar el ancho en pantallas medianas */
+  }
+}
+
+@media (min-width: 1025px) {
+  form {
+    width: 50%; /* Mantener estilo original en pantallas grandes */
+  }
+}
+
+
 label {
   width: 100%;
   margin-bottom: 5px;

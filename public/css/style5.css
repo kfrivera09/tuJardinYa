@@ -104,3 +104,100 @@ header#navegacion-sitio nav ul li a:hover {
     margin: 0;
     color: #555;
 }
+
+/* Responsive Design */
+
+/* Pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        flex-direction: column; /* Cambiar disposición para móviles */
+        padding: 10px; /* Reducir padding */
+        height: auto; /* Permitir altura dinámica */
+    }
+
+    header {
+        flex-direction: column; /* Cambiar orientación a columna */
+        align-items: center; /* Centrar elementos */
+        padding: 10px; /* Reducir padding */
+        height: auto; /* Ajustar altura según el contenido */
+    }
+
+    header img#logo {
+        height: 80px; /* Reducir tamaño del logo */
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 18px; /* Ajustar tamaño del texto */
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: row; /* Cambiar a disposición vertical */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* Reducir espacio entre ítems */
+        padding: 0;
+        margin: 0px; /* Espacio extra */
+    }
+
+    .service {
+        margin-top: 156px;
+        flex-direction: column; /* Cambiar disposición de fila a columna */
+        width: 100%; /* Usar todo el ancho disponible */
+        margin-bottom: 20px; /* Reducir espacio inferior */
+    }
+
+    .service img {
+        width: 100%; /* Imagen ocupa todo el ancho */
+    }
+
+    .service-info {
+        padding: 15px; /* Ajustar padding interno */
+    }
+
+    .service h2 {
+        font-size: 20px; /* Reducir tamaño del título */
+    }
+
+    .service p {
+        font-size: 14px; /* Reducir tamaño del texto */
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 15px 30px; /* Ajustar padding para tabletas */
+    }
+
+    header img#logo {
+        height: 80px; /* Tamaño intermedio para el logo */
+    }
+
+    header nav ul {
+        gap: 20px; /* Espacio moderado entre ítems */
+    }
+
+    .service {
+        flex-direction: row; /* Mantener disposición en filas */
+        width: 90%; /* Reducir el ancho ligeramente */
+    }
+
+    .service img {
+        width: 45%; /* Imagen ocupa menos espacio */
+    }
+
+    .service-info {
+        padding: 20px; /* Espacio interno moderado */
+    }
+
+    .service h2 {
+        font-size: 22px; /* Ajuste intermedio */
+    }
+
+    .service p {
+        font-size: 15px; /* Ajuste intermedio del texto */
+    }
+}

@@ -74,7 +74,32 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
+  
+  /* Media Queries para diseño responsive */
+  
+  /* Dispositivos pequeños (teléfonos móviles) */
+  @media (max-width: 600px) {
+    form {
+      width: 90%; /* Ampliar el ancho para ocupar más espacio en pantallas pequeñas */
+      padding: 20px; /* Ajustar el espacio interno */
+    }
+  }
+  
+  /* Dispositivos medianos (tabletas) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    form {
+      width: 70%; /* Reducir el ancho para tabletas */
+    }
+  }
+  
+  /* Dispositivos grandes (escritorios) */
+  @media (min-width: 1025px) {
+    form {
+      width: 50%; /* Mantener el ancho original para pantallas grandes */
+    }
+  }
+  
 
 label {
     width: 100%;
